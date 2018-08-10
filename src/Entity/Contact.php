@@ -14,6 +14,11 @@ use Symfony\Component\Validator\Constraints\Length;
 class Contact
 {
     /**
+     * @ORM\Column(type="boolean")
+     */
+    private $checked = false;
+
+    /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
@@ -58,6 +63,18 @@ class Contact
      * @Assert\DateTime()
      */
     protected $postedAt;
+
+    public function getChecked(): ?bool
+    {
+        return $this->checked;
+    }
+
+    public function setChecked(bool $checked): self
+    {
+        $this->checked = $checked;
+
+        return $this;
+    }
 
     public function getId()
     {

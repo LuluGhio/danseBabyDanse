@@ -28,3 +28,35 @@ framework:
 
         # APCu (not recommended with heavy random-write workloads as memory fragmentation can cause perf issues)
         #app: cache.adapter.apcu
+
+    validation: { enable_annotations: true }
+
+
+easy_admin:
+    design:
+        brand_color: '#f476db'
+    formats: 
+        datetime: 'd/m/Y H:i:s'
+    site_name: 'Danse Baby Danse !'
+    entities:
+        Contact:
+            class: App\Entity\Contact
+            list:
+                title: "Messages reçus"
+                fields:
+                    - { property: 'checked', type: 'toggle' }
+                    - { property: 'id' }
+                    - { property: 'firstName' }
+                    - { property: 'lastName' }
+                    - { property: 'email' }
+                    - { property: 'phoneNumber' }
+                    - { property: 'content' }
+                    - { property: 'postedAt', type: 'datetime' }
+            show:
+                fields:
+                    - { property: 'firstName' }
+                    - { property: 'lastName' }
+                    - { property: 'email' }
+                    - { property: 'phoneNumber' }
+                    - { property: 'content' }
+                    - { property: 'postedAt', type: 'datetime' }

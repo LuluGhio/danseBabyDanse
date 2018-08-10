@@ -25,5 +25,9 @@ class HomeController extends Controller
         return $this->render('home/home.html.twig'); // render allows to call for the twig file
     }
 
+    public function actu(){
+        return $this->render('home/home.html.twig');
+    }
+
    
 }

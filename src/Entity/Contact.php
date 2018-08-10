@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Constraints\Email;
+use Symfony\Component\Validator\Constraints\Length;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
@@ -37,7 +39,11 @@ class Contact
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=10)
+     * @Assert\Length(
+     *                  min = 10,
+     *                  max = 10
+     * )
      */
     private $phoneNumber;
 

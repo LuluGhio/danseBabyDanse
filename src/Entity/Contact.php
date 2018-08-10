@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Validator\Constraints\DateTime;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Length;
 
@@ -54,8 +55,9 @@ class Contact
 
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\DateTime()
      */
-    private $postedAt;
+    protected $postedAt;
 
     public function getId()
     {
@@ -121,6 +123,11 @@ class Contact
 
         return $this;
     }
+    
+    public function __construct()
+    {
+        $this->postedAt = new \DateTime();
+    }
 
     public function getPostedAt(): ?\DateTimeInterface
     {
@@ -133,4 +140,5 @@ class Contact
 
         return $this;
     }
+
 }

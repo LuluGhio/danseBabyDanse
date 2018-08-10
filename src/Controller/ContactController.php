@@ -7,6 +7,7 @@ use App\Form\ContactType;
 use App\Repository\ContactRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\createFormBuilder;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,21 +17,12 @@ class ContactController extends Controller
     /**
      * @Route("/contact", name="contact")
      */
-    public function index()
-    {
-        return $this->render('contact/index.html.twig', [
-            'controller_name' => 'ContactController',
-        ]);
-    }
-
-    /**
-     * @Route("/contact", name="contact")
-     */
     public function newContact(Request $request, EntityManagerInterface $entityManager): Response{
         
         $entityManager = $this->getDoctrine()->getManager();
         
         $contact = new Contact(); // $contact is an empty contact object, ready to be completed
+        
         // createFormBuilder() creates a form binded to $contact
         $form = $this->createForm(ContactType::class, $contact); // here $contact is the entity
 

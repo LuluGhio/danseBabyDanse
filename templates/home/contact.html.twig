@@ -3,13 +3,15 @@
 {% block body %}
 
     {% form_theme formContact 'bootstrap_4_layout.html.twig' %}
+
     
     {{ form_start(formContact) }}
 
-        {{ form_row(formContact.prenom,{'attr': {'placeholder': 'Votre prénom'}}) }}
-        {{ form_row(formContact.nom,{'attr': {'placeholder': 'Votre nom'}}) }}
+        {{ form_row(formContact.firstName,{'attr': {'placeholder': 'Votre prénom'}}) }}
+        {{ form_row(formContact.lastName,{'attr': {'placeholder': 'Votre nom'}}) }}
         {{ form_row(formContact.email,{'attr': {'placeholder': 'Votre email'}}) }}
-        {{ form_row(formContact.message,{'attr': {'placeholder': 'Votre message'}}) }}
+        {{ form_row(formContact.phoneNumber,{'attr': {'placeholder': 'Votre email'}}) }}
+        {{ form_row(formContact.content,{'attr': {'placeholder': 'Votre message'}}) }}
 
     {{ form_end(formContact) }}
     

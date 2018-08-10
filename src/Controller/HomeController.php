@@ -12,7 +12,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return $this->render('home/index.html.twig', [
+        return $this->render('base.html.twig', [
             'controller_name' => 'HomeController',
         ]);
     }
@@ -22,20 +22,8 @@ class HomeController extends Controller
      */
     public function home()
     {
-        return $this->render('home/home.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
+        return $this->render('home/home.html.twig'); // render allows to call for the twig file
     }
 
-    /**
-     * @Route("/contact", name="contact")
-     */
-    public function displayContact()
-    {
-        return $this->render('home/contact.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
-    }
-
-    
+   
 }

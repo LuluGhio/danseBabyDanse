@@ -26,18 +26,19 @@ class HomeController extends Controller
     /**
      * @Route("/", name="home")
      */
-    public function home()
+    public function home(Request $request, EntityManagerInterface $entityManager) :Response
     {
-        return $this->render('home/home.html.twig'); // render allows to call for the twig file
-    }
-
-    public function displayActus(Request $request, EntityManagerInterface $entityManager) :Response{
-
+        $eventDate = new \DateTime(); 
+        // $eventDate = les dates supp à la date de mtn où on fait la requête
         $actus = $this->getDoctrine()
                         ->getRepository(Actus::class)
                         ->findByExampleField($eventDate);
 
-        return $this->render('home/home.html.twig');
+        return $this->render('home/home.html.twig', [
+            'controller_name' => 'HomeController',
+            'actus' => $actus,
+        ]);
     }
+
    
 }

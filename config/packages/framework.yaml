@@ -111,7 +111,6 @@ easy_admin:
                     - { property: 'urlImg'}
             new:
                 fields:
-                    - { property: 'id'}
                     - { property: 'title'}
                     - { property: 'place'}
                     - { property: 'eventDate', type: 'datetime'}

@@ -17,8 +17,8 @@ class ActusFixtures extends Fixture
         			->setPlace ("lieu de $i")
         			->setEventDate (new \DateTime())
         			->setContent ("Contenu de $i")
-        			->setPrice ("Prix/personne de $i")
-        			->setUrlImg ("Image de $i")
+        			->setPrice ("$i")
+        			->setUrlImg ("http://placehold.it/350x250")
         			->setCreatedAt (new \DateTime());
 
         	$manager->persist($actus);

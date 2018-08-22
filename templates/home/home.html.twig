@@ -4,30 +4,38 @@
 {% block body %}
 
 
-	<h2>Les news !</h2>
+	<h2>Evènements à venir</h2>
 
 
 	    <section id="actus" class="container row">
             <div> <!-- DO NOT DELETE !! -->
-                    <div id="contenant-card"> <!-- contenant card -->
-                        <div class="card col s12 m4">
+                <div id="contenant-card"> <!-- contenant card -->
+                                            {% for actu in actus %} 
+
+                    <div class="card col s12 m4">
+
                             <div class="card-image">
-                                <img src="https://placehold.it/350x250">
-                                <span class="card-title">Soirée SBK</span>
+                                <img src="{{ actu.urlImg }}">
+                                <span class="card-title">{{ actu.title }}</span>
                             </div>
                             <div class="card-content">
-                                <p>Lieu : 150 av des danseurs, 13190 Allauch</p>
+                                <p>Lieu : {{ actu.place }}</p>
                                 <hr />
-                                <p>Date: xx/xx/xx</p>
-                                <p>Ticket d'entrée: xx€/pers</p>
+                                <p>Date: {{ actu.eventDate | date('d/m/Y') }}</p>
+                                <p>Ticket d'entrée: {{ actu.price }}€/pers</p>
                                 <hr>
-                                <p>CONTENT</p>
+                                <p>{{ actu.content }}</p>
                             </div>
+                            <!--
     				        <div class="card-action">
     				            <a href="#">plus d'infos</a>
     				        </div>
-                        </div>
+                            -->
+
                     </div>
+                        {% endfor %}
+
+                </div>
                 
             </div> <!-- DO NOT DELETE !! -->
         </section> <!-- END OF SECTION actus -->

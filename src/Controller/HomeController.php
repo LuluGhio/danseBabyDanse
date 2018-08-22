@@ -4,6 +4,12 @@ namespace App\Controller;
 
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use App\Entity\Actus;
+use App\Repository\ActusRepository;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+
 
 class HomeController extends Controller
 {
@@ -25,9 +31,13 @@ class HomeController extends Controller
         return $this->render('home/home.html.twig'); // render allows to call for the twig file
     }
 
-    public function actu(){
+    public function displayActus(Request $request, EntityManagerInterface $entityManager) :Response{
+
+        $actus = $this->getDoctrine()
+                        ->getRepository(Actus::class)
+                        ->findByExampleField($eventDate);
+
         return $this->render('home/home.html.twig');
     }
-
    
 }

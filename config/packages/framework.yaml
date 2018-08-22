@@ -1,4 +1,5 @@
 framework:
+    translator: { fallbacks: [ "fr" ] }
     secret: '%env(APP_SECRET)%'
     #default_locale: en
     #csrf_protection: true
@@ -34,7 +35,7 @@ framework:
 
 easy_admin:
     design:
-        brand_color: '#f476db'
+        brand_color: '#424242'
     formats: 
         datetime: 'd/m/Y H:i:s'
     site_name: 'Danse Baby Danse !'
@@ -42,7 +43,8 @@ easy_admin:
         Contact:
             class: App\Entity\Contact
             list:
-                title: "Messages reçus"
+                title: "CONTACT : Messages reçus"
+                actions: ['show', 'new', 'edit', 'search', 'delete']
                 fields:
                     - { property: 'checked', type: 'toggle' }
                     - { property: 'id' }
@@ -60,3 +62,60 @@ easy_admin:
                     - { property: 'phoneNumber' }
                     - { property: 'content' }
                     - { property: 'postedAt', type: 'datetime' }
+            edit:
+                fields:
+                    - { property: 'firstName' }
+                    - { property: 'lastName' }
+                    - { property: 'email' }
+                    - { property: 'phoneNumber' }
+                    - { property: 'content' }
+                    - { property: 'postedAt', type: 'datetime' }                    
+            new:
+                fields:
+                    - { property: 'id' }
+                    - { property: 'firstName' }
+                    - { property: 'lastName' }
+                    - { property: 'email' }
+                    - { property: 'phoneNumber' }
+                    - { property: 'content' }
+                    - { property: 'postedAt', type: 'datetime' }
+        Actus:
+            class: App\Entity\Actus
+            list:
+                title: "ACTUS : posts"
+                actions: ['show', 'new', 'edit', 'search', 'delete']
+                fields:
+                    - { property: 'id'}
+                    - { property: 'title'}
+                    - { property: 'place'}
+                    - { property: 'eventDate', type: 'datetime'}
+                    - { property: 'content'}
+                    - { property: 'price'}
+                    - { property: 'urlImg'}
+                    - { property: 'createdAt', type: 'datetime'}
+            show:
+                fields:
+                    - { property: 'title'}
+                    - { property: 'place'}
+                    - { property: 'eventDate', type: 'datetime'}
+                    - { property: 'content'}
+                    - { property: 'price'}
+                    - { property: 'urlImg'}
+            edit:
+                fields:
+                    - { property: 'title'}
+                    - { property: 'place'}
+                    - { property: 'eventDate', type: 'datetime'}
+                    - { property: 'content'}
+                    - { property: 'price'}
+                    - { property: 'urlImg'}
+            new:
+                fields:
+                    - { property: 'id'}
+                    - { property: 'title'}
+                    - { property: 'place'}
+                    - { property: 'eventDate', type: 'datetime'}
+                    - { property: 'content'}
+                    - { property: 'price'}
+                    - { property: 'urlImg'}
+                    - { property: 'createdAt', type: 'datetime'}

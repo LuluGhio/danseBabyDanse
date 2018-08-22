@@ -5,6 +5,7 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <!-- Compiled and minified CSS -->
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    	<link rel="stylesheet" type="text/css" href="style.css">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
@@ -30,8 +31,8 @@
 			  <li><a href="#!">Poster une annonce</a></li>
 			</ul>
 			<nav>
-			  <div class="nav-wrapper">
-			    <a href="home.html.twig" class="brand-logo">Danse baby danse !</a>
+			  <div class="nav-wrapper grey darken-4">
+			    <a href="/home" class="brand-logo">Danse baby danse !</a>
 			    <ul class="right hide-on-med-and-down">
 			      <!-- Dropdown Trigger -->
 			      <li><a class="dropdown-trigger" href="#!" data-target="planning">Planning<i class="material-icons right"></i></a></li>
@@ -45,7 +46,8 @@
 			</nav>
         </header>
 
-        <div class="container">
+
+        <div class="container-fluid">
 
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}

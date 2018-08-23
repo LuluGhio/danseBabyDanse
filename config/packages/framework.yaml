@@ -84,6 +84,7 @@ easy_admin:
             list:
                 title: "ACTUS : posts"
                 actions: ['show', 'new', 'edit', 'search', 'delete']
+                form:
                 fields:
                     - { property: 'id'}
                     - { property: 'title'}
@@ -91,7 +92,7 @@ easy_admin:
                     - { property: 'eventDate', type: 'datetime'}
                     - { property: 'content'}
                     - { property: 'price'}
-                    - { property: 'urlImg'}
+                    - { property: 'urlImg', type: 'image', base_path: '%app.path.danse_images%'}
                     - { property: 'createdAt', type: 'datetime'}
             show:
                 fields:
@@ -100,7 +101,7 @@ easy_admin:
                     - { property: 'eventDate', type: 'datetime'}
                     - { property: 'content'}
                     - { property: 'price'}
-                    - { property: 'urlImg'}
+                    - { property: 'urlImg', type: 'image', base_path: '%app.path.danse_images%'}
             edit:
                 fields:
                     - { property: 'title'}
@@ -108,7 +109,8 @@ easy_admin:
                     - { property: 'eventDate', type: 'datetime'}
                     - { property: 'content'}
                     - { property: 'price'}
-                    - { property: 'urlImg'}
+                    #- { property: 'urlImg', type: 'image', base_path: '%app.path.danse_images%'}
+                    - { property: 'imageFile', type: 'vich_image'}
             new:
                 fields:
                     - { property: 'title'}
@@ -116,5 +118,7 @@ easy_admin:
                     - { property: 'eventDate', type: 'datetime'}
                     - { property: 'content'}
                     - { property: 'price'}
-                    - { property: 'urlImg'}
+                    #- { property: 'urlImg', type: 'image', base_path: '%app.path.danse_images%'}
+                    - { property: 'imageFile', type: 'vich_image'}
                     - { property: 'createdAt', type: 'datetime'}
+

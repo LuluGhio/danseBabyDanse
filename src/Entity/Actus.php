@@ -3,12 +3,16 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Constraints\DateTime;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ActusRepository")
+ * @Vich\Uploadable
  */
 class Actus
 {
@@ -48,6 +52,21 @@ class Actus
      * @ORM\Column(type="text", nullable=true)
      */
     private $urlImg;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @var string
+     */
+    private $image;
+    //image stores the name of the uploaded image and it's persisted in the database
+
+    /**
+     * @Vich\UploadableField(mapping="danse_images", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
+    //imageFile stores the contents of the image file and it's not persisted in the database
+
 
     /**
      * @ORM\Column(type="datetime")
@@ -135,6 +154,30 @@ class Actus
         $this->urlImg = $urlImg;
 
         return $this;
+    }
+
+    public function setImageFile(File $image)
+    {
+        $this->imageFile = $image;
+
+        if ($image) {
+            $this->createdAt = new \DateTime('now');
+        }
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
     }
     
     public function getCreatedAt(): ?\DateTimeInterface

@@ -26,7 +26,7 @@ class ActusRepository extends ServiceEntityRepository
     public function findByExampleField($eventDate): array   // Returns an array of Actus objects
     {
         $queryBuilder = $this->createQueryBuilder('a')      // 'a' is an alias = shortcut for Actus
-            ->andWhere('a.eventDate < :eventDate')          // eventDate après la date où l'on charge la requête
+            ->andWhere('a.eventDate > :eventDate')          // eventDate après la date où l'on charge la requête
             ->setParameter('eventDate', $eventDate)
             ->orderBy('a.eventDate', 'DESC')
             ->setMaxResults(3)
@@ -35,4 +35,11 @@ class ActusRepository extends ServiceEntityRepository
         return $queryBuilder->getQuery()->getResult();
     }
 
+    /*
+     * @param $eventDate
+    */
+        public function findAll()
+    {
+        return $this->findBy(array(), array('eventDate' => 'ASC'));
+    }
 }

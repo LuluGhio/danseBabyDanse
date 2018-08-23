@@ -10,36 +10,24 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-
-class HomeController extends Controller
+class ActusController extends Controller
 {
-    /**
-     * @Route("/home", name="home")
-     */
-    public function index()
-    {
-        return $this->render('base.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
-    }
 
     /**
-     * @Route("/", name="home")
+     * @Route("/actus", name="allActus")
      */
-    // displaying actus:
+    // displaying all actus:
     public function home(Request $request, EntityManagerInterface $entityManager) :Response
     {
         $eventDate = new \DateTime(); 
         // $eventDate = les dates supp à la date de mtn où on fait la requête
         $actus = $this->getDoctrine()
                         ->getRepository(Actus::class)
-                        ->findByExampleField($eventDate);
+                        ->findAll();
 
-        return $this->render('home/home.html.twig', [
-            'controller_name' => 'HomeController',
+        return $this->render('actus/allActus.html.twig', [
+            'controller_name' => 'ActusController',
             'actus' => $actus,
         ]);
     }
-
-   
 }

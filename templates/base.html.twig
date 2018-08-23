@@ -32,10 +32,10 @@
 			</ul>
 			<nav>
 			  <div class="nav-wrapper grey darken-4">
-			    <a href="/home" class="brand-logo">Danse baby danse !</a>
+			    <a href="{{ path('home') }}" class="brand-logo">Danse baby danse !</a>
 			    <ul class="right hide-on-med-and-down">
 			      <!-- Dropdown Trigger -->
-			      <li><a class="dropdown-trigger" href="#!" data-target="planning">Planning<i class="material-icons right"></i></a></li>
+			      <li><a class="dropdown-trigger" href="#!" data-target="planning">Plannings<i class="material-icons right"></i></a></li>
 			      <li><a class="dropdown-trigger" href="#!" data-target="stage">Stages<i class="material-icons right"></i></a></li>
 			      <li><a class="dropdown-trigger" href="#!" data-target="inscriptions">Inscriptions<i class="material-icons right"></i></a></li>
 			      <li><a class="dropdown-trigger" href="#!" data-target="annonces">Petites annonces<i class="material-icons right"></i></a></li>
@@ -51,6 +51,34 @@
 
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+
+
+        <footer class="page-footer grey darken-4">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Danse Baby Danse !</h5>
+                <p class="grey-text text-lighten-4">510 chemin des danseurs<br>13400 - Aubagne</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Nos liens</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Plannings</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Inscriptions</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Petites annonces</a></li>
+                  <li><a class="grey-text text-lighten-3" href="{{ path('contact') }}">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright LuluBerlue
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+            
         
 		</div>
 

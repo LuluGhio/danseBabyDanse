@@ -4,16 +4,20 @@
 
     {% form_theme formContact 'bootstrap_4_layout.html.twig' %}
 
-    
-    {{ form_start(formContact) }}
+	<h4>Envoyer votre message !</h4>
 
-        {{ form_row(formContact.firstName,{'attr': {'placeholder': 'Votre prénom'}}) }}
-        {{ form_row(formContact.lastName,{'attr': {'placeholder': 'Votre nom'}}) }}
-        {{ form_row(formContact.email,{'attr': {'placeholder': 'Votre email'}}) }}
-        {{ form_row(formContact.phoneNumber,{'attr': {'placeholder': 'Votre email'}}) }}
-        {{ form_row(formContact.content,{'attr': {'placeholder': 'Votre message'}}) }}
+	    <section id="actus" class="container">
 
-    {{ form_end(formContact) }}
     
+		    {{ form_start(formContact) }}
+
+		        {{ form_row(formContact.firstName,{'attr': {'placeholder': 'Votre prénom'}}) }}
+		        {{ form_row(formContact.lastName,{'attr': {'placeholder': 'Votre nom'}}) }}
+		        {{ form_row(formContact.email,{'attr': {'placeholder': 'Votre email'}}) }}
+		        {{ form_row(formContact.phoneNumber,{'attr': {'placeholder': 'Votre email'}}) }}
+		        {{ form_row(formContact.content,{'attr': {'placeholder': 'Votre message'}}) }}
+
+		    {{ form_end(formContact) }}
+    	</section>
 
 {% endblock %}

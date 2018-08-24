@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Constraints\DateTime;
@@ -53,15 +52,9 @@ class Actus
      */
     private $urlImg;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @var string
-     */
-    private $image;
-    //image stores the name of the uploaded image and it's persisted in the database
 
     /**
-     * @Vich\UploadableField(mapping="danse_images", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="actus_images", fileNameProperty="urlImg")
      * @var File
      */
     private $imageFile;

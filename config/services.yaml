@@ -5,7 +5,7 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'en'
-    app.path.danse_images: /uploads/images/danse
+    app.path.actus_images: /uploads/images/actus
 
 services:
     # default configuration for services in *this* file
@@ -33,6 +33,6 @@ services:
 
 vich_uploader:
     mappings:
-        danse_images:
-            uri_prefix:         '%app.path.danse_images%'
-            upload_destination: '%kernel.root_dir%/../web%app.path.danse_images%'
+        actus_images:
+            uri_prefix:         '%app.path.actus_images%'
+            upload_destination: '%kernel.root_dir%/../public%app.path.actus_images%'

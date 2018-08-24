@@ -4,7 +4,7 @@
 {% block body %}
 
 
-	<h2>Evènements à venir</h2>
+	<h4>Evènements à venir</h4>
 
 	    <section id="actus" class="container row">
             <div> <!-- DO NOT DELETE !! -->
@@ -14,7 +14,7 @@
                     <div class="card col s12 m4">
 
                             <div class="card-image">
-                                <img src="{{ actu.urlImg }}">
+                                <img src="{{ asset('/uploads/images/actus/'~actu.urlimg) }}">
                                 <span class="card-title teal-text">{{ actu.title }}</span>
                             </div>
                             <div class="card-content">

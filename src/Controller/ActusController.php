@@ -20,7 +20,7 @@ class ActusController extends Controller
     public function home(Request $request, EntityManagerInterface $entityManager) :Response
     {
         $eventDate = new \DateTime(); 
-        // $eventDate = les dates supp à la date de mtn où on fait la requête
+        // $eventDate = les dates supp à la date du moment où on fait la requête
         $actus = $this->getDoctrine()
                         ->getRepository(Actus::class)
                         ->findAll();

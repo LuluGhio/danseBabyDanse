@@ -92,7 +92,7 @@ easy_admin:
                     - { property: 'eventDate', type: 'datetime'}
                     - { property: 'content'}
                     - { property: 'price'}
-                    - { property: 'urlImg', type: 'image', base_path: '%app.path.danse_images%'}
+                    - { property: 'urlImg', type: 'image', base_path: '%app.path.actus_images%'}
                     - { property: 'createdAt', type: 'datetime'}
             show:
                 fields:
@@ -101,7 +101,7 @@ easy_admin:
                     - { property: 'eventDate', type: 'datetime'}
                     - { property: 'content'}
                     - { property: 'price'}
-                    - { property: 'urlImg', type: 'image', base_path: '%app.path.danse_images%'}
+                    - { property: 'urlImg', type: 'image', base_path: '%app.path.actus_images%'}
             edit:
                 fields:
                     - { property: 'title'}
@@ -109,7 +109,7 @@ easy_admin:
                     - { property: 'eventDate', type: 'datetime'}
                     - { property: 'content'}
                     - { property: 'price'}
-                    #- { property: 'urlImg', type: 'image', base_path: '%app.path.danse_images%'}
+                    #- { property: 'urlImg', type: 'image', base_path: '%app.path.actus_images%'}
                     - { property: 'imageFile', type: 'vich_image'}
             new:
                 fields:
@@ -118,7 +118,7 @@ easy_admin:
                     - { property: 'eventDate', type: 'datetime'}
                     - { property: 'content'}
                     - { property: 'price'}
-                    #- { property: 'urlImg', type: 'image', base_path: '%app.path.danse_images%'}
+                    #- { property: 'urlImg', type: 'image', base_path: '%app.path.actus_images%'}
                     - { property: 'imageFile', type: 'vich_image'}
                     - { property: 'createdAt', type: 'datetime'}
 

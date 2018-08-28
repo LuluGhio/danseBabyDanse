@@ -4,32 +4,15 @@
         <meta charset="UTF-8">
         <title>DanseBD</title>
         <!-- Compiled and minified CSS -->
-    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    	<link rel="stylesheet" href="../public/style.css" type="text/css" />
-        {% block stylesheets %}{% endblock %}
+    
+        {% block stylesheets %}
+          <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        {% endblock %}
     </head>
+    
     <body>
     	<header>
-			<!-- Dropdown Structure PLANNING -->
-			<ul id="planning" class="dropdown-content">
-			  <li><a href="#!">Enfants et ados</a></li>
-			  <li><a href="#!">Adultes</a></li>
-			</ul>
-			<!-- Dropdown Structure STAGES -->
-			<ul id="stage" class="dropdown-content">
-			  <li><a href="#!">Par dates</a></li>
-			  <li><a href="#!">Par disciplines</a></li>
-			</ul>
-			<!-- Dropdown Structure INSCRIPTIONS -->
-			<ul id="inscriptions" class="dropdown-content">
-			  <li><a href="#!">Cours</a></li>
-			  <li><a href="#!">Stages</a></li>
-			</ul>
-			<!-- Dropdown Structure PETITESANNONCES -->
-			<ul id="annonces" class="dropdown-content">
-			  <li><a href="#!">Consulter les annonces</a></li>
-			  <li><a href="#!">Poster une annonce</a></li>
-			</ul>
 			<nav>
 			  <div class="nav-wrapper grey darken-4">
 			    <a href="{{ path('home') }}" class="brand-logo">Danse baby danse !</a>
@@ -37,7 +20,7 @@
 			      <!-- Dropdown Trigger -->
 			      <li><a class="dropdown-trigger" href="#!" data-target="planning">Plannings/Tarifs<i class="material-icons right"></i></a></li>
 			      <li><a class="dropdown-trigger" href="#!" data-target="stage">Stages<i class="material-icons right"></i></a></li>
-			      <li><a class="dropdown-trigger" href="#!" data-target="inscriptions">Pré-inscriptions<i class="material-icons right"></i></a></li>
+			      <li><a class="dropdown-trigger" href="{{ path('inscriptions') }}" data-target="inscriptions">Pré-inscriptions<i class="material-icons right"></i></a></li>
 			      <li><a class="dropdown-trigger" href="#!" data-target="annonces">Petites annonces<i class="material-icons right"></i></a></li>
 			      <li><a class="dropdown-trigger" href="{{ path('contact') }}" data-target="annonces">Contactez-nous !<i class="material-icons right"></i></a></li>
 			      <li><a href="#!">Espace membre</a></li>
@@ -64,7 +47,7 @@
                 <h5 class="white-text">Nos liens</h5>
                 <ul>
                   <li><a class="grey-text text-lighten-3" href="#!">Plannings/Tarifs</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Pré-inscriptions</a></li>
+                  <li><a class="grey-text text-lighten-3" href="{{ path('inscriptions') }}">Pré-inscriptions</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Petites annonces</a></li>
                   <li><a class="grey-text text-lighten-3" href="{{ path('contact') }}">Contact</a></li>
                 </ul>

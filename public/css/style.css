@@ -1,15 +1,11 @@
-/*body{
+body{
     background: 50% url("img/ballet.jpg") no-repeat;
     background-attachment: fixed;
 
-    font-family: 'Montserrat Alternates', sans-serif;	
-}*/
+    /*font-family: 'Montserrat Alternates', sans-serif;*/	
+}
 
 #inscriptions_adult{
 	color: red;
 	display: block;
-}
-
-h4{
-	color: red;
 }

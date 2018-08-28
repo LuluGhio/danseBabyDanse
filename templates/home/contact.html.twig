@@ -11,11 +11,11 @@
     
 		    {{ form_start(formContact) }}
 
-		        {{ form_row(formContact.firstName,{'attr': {'placeholder': 'Votre prénom'}}) }}
-		        {{ form_row(formContact.lastName,{'attr': {'placeholder': 'Votre nom'}}) }}
-		        {{ form_row(formContact.email,{'attr': {'placeholder': 'Votre email'}}) }}
-		        {{ form_row(formContact.phoneNumber,{'attr': {'placeholder': 'Votre email'}}) }}
-		        {{ form_row(formContact.content,{'attr': {'placeholder': 'Votre message'}}) }}
+		        {{ form_row(formContact.firstName) }}
+		        {{ form_row(formContact.lastName) }}
+		        {{ form_row(formContact.email) }}
+		        {{ form_row(formContact.phoneNumber) }}
+		        {{ form_row(formContact.content) }}
 
 		    {{ form_end(formContact) }}
     	</section>

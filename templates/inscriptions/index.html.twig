@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% form_theme formInscriptions 'bootstrap_4_layout.html.twig' %}
+
+	<h4>Pré-inscrivez-vous !</h4>
+
+
+	    <section id="inscriptions" class="container">
+		
+			<p>Pour toute pré-inscription d'un mineur, les coordonnées <em>téléphone</em> et <em>email</em> doivent être celles du parent ou tuteur.</p>
+	    	<p>L'inscription définitive se fera après un cours d'essai (<a href="#!" data-target="planning">planning</a>), et sous réserve de l'avis du professeur quant au niveau envisagé.</p>
+
+	    
+		    {{ form_start(formInscriptions) }}
+
+		        <p>Cochez si :</p>
+		        {{ form_row(formInscriptions.adult) }}
+		        {{ form_row(formInscriptions.firstName) }}
+		        {{ form_row(formInscriptions.lastName) }}
+		        {{ form_row(formInscriptions.phoneNumber) }}
+		        {{ form_row(formInscriptions.email) }}
+		        {{ form_row(formInscriptions.birthDate) }}
+		        <p>Choississez vos cours :</p>
+		        <div class="row">
+		        	<div class="col s12 m3">
+		        		<p>Enfants/ados</p>
+				        {{ form_row(formInscriptions.grades) }}
+				        	<input type="checkbox"><label for="">CLASSIQUE 7-9 ans</label>
+				        	<br>
+				        	<input type="checkbox"><label for="">CLASSIQUE 10-12 ans</label>
+				        	<br>
+				        	<input type="checkbox"><label for="">CLASSIQUE 13-15 ans*</label>
+				        	<br>
+				        	<input type="checkbox"><label for="">CLASSIQUE 16 ans et plus</label>
+				        	<br>
+				        	<input type="checkbox"><label for="">JAZZ 10-12 ans**</label>
+				        	<br>
+				        	<input type="checkbox"><label for="">JAZZ 13-15 ans</label>
+				        	<br>
+				        	<input type="checkbox"><label for="">JAZZ 16 ans et plus</label>
+		        	</div>
+		        	<div class="col s12 m3">
+		        		<p>Enfants/ados</p>
+			        	<input type="checkbox"><label for="">DANSE DE SALON 10-12 ans</label>
+			        	<br>
+			        	<input type="checkbox"><label for="">DANSE DE SALON 13-15 ans</label>
+			        	<br>
+			        	<input type="checkbox"><label for="">DANSE DE SALON 16 ans et plus</label>
+		        	</div>
+		        	
+		        	
+		        	<div class="col s12 m3">
+		        		<p>Adultes</p>
+			        	<input type="checkbox"><label for="">CLASSIQUE débutant</label>
+			        	<br>
+			        	<input type="checkbox"><label for="">CLASSIQUE intermédiaire</label>
+			        	<br>
+			        	<input type="checkbox"><label for="">CLASSIQUE avancé</label>
+						<br>
+			        	<input type="checkbox"><label for="">JAZZ débutant</label>
+			        	<br>
+			        	<input type="checkbox"><label for="">JAZZ intermédiaire</label>
+			        	<br>
+			        	<input type="checkbox"><label for="">JAZZ avancé</label>
+			        </div>
+			        <div class="col s12 m3">
+			        	<p>Adultes</p>
+			        	<input type="checkbox"><label for="">SALSA débutant</label>
+			        	<br>
+			        	<input type="checkbox"><label for="">SALSA intermédiaire</label>
+			        	<br>
+			        	<input type="checkbox"><label for="">SALSA avancé</label>
+						<br>
+			        	<input type="checkbox"><label for="">BACHATA débutant</label>
+			        	<br>
+			        	<input type="checkbox"><label for="">BACHATA intermédiaire</label>
+			        	<br>
+			        	<input type="checkbox"><label for="">BACHATA avancé</label>
+			        </div>
+		        </div>
+		        <div class="row col s12 m6">
+				        <p>* Début du travail sur pointes, sous réserve de l'avis du professeur. Un refus du professeur n'est ni un échec ni une punition: monter sur pointe exige une musculature et une technique avancée - chaque enfant est unique, sa croissance également. Nous ne souhaitons pas que vos enfants se blessent.</p>
+	        			<p>** Pour des raisons physiques, pas de jazz avant 10ans. Avant de pratiquer le jazz, le corps et les muscles des enfants doivent s'habituer aux postures, aux techniques et à la discipline de la danse en passant par la pratique de la danse classique.</p>
+        			</div>
+		    {{ form_end(formInscriptions) }}
+	    	<p>Après envoi de ce formulaire, vous recevrez un email de confirmation de votre pré-inscription.</p>
+
+    	</section>
+
+
+{% endblock %}
+

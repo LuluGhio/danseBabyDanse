@@ -2,18 +2,161 @@
 
 {% block body %}
 
-	<section id="404" class="container">
-	 	<div class="row">
-		    <div class="col s12 m12">
-		      	<div class="card-panel blue-grey lighten-3">
-		        	<span class="white-text">
-		        		<h4>
-		        			<i class="fas fa-paint-roller"></i> Désolé, cette page n'existe pas (encore) <i class="fas fa-paint-roller"></i>
-		        		</h4>
-		        	</span>
-		      	</div>
-		    </div>
-	  	</div>
-    </section>
+	<h4>Notre planning !</h4>
+
+		<section id="planning" class="container">
+		 		
+	      	<table class="striped centered responsive-table teal lighten-3">
+	        	<thead>
+	          		<tr class="centered">
+	          			<th></th>
+		              <th colspan="3">LUNDI</th>
+		              <th colspan="3">MERCREDI</th>
+		              <th>SAMEDI</th>
+	          		</tr>
+	          		<tr>
+		                <th>Horaires</th>
+		                <th>Studio A</th>
+		                <th>Studio B</th>
+		                <th>Studio A</th>
+		                <th>Studio B</th>
+		                <th>Studio C</th>
+		                <th>Studio A</th>
+		                <th>Studio B</th>
+		                <th>Studio C</th>
+	          		</tr>
+	        	</thead>
+	        	<tbody>
+	          		<tr>
+	          			<td>11h00</td>
+			            <th></th>
+			            <th></th>
+			            <th></th>
+			            <th></th>
+			            <th></th>
+			            <th>*STAGES</th>
+			            <th>**Prép. concours CLASSIQUE 10-12</th>
+			            <th>**Prép. concours JAZZ 13-15</th>
+	          		</tr>
+	          		<tr>
+	          			<td>12h15</td>
+			            <th></th>
+			            <th></th>
+			            <th></th>
+			            <th></th>
+			            <th></th>
+			            <th>STAGES</th>
+			            <th></th>
+			            <th></th>
+	          		</tr>
+	          		<tr>
+	          			<td>13h30</td>
+			            <th></th>
+			            <th></th>
+			            <th>Eveil</th>
+			            <th></th>
+			            <th></th>
+			            <th>*STAGES</th>
+			            <th>**Prép. concours CLASSIQUE 13-15</th>
+			            <th>**Prép. concours JAZZ 10-12</th>
+	          		</tr>
+	          		<tr>
+	          			<td>14h45</td>
+			            <th></th>
+			            <th></th>
+			            <th>Classique 7-9</th>
+			            <th></th>
+			            <th></th>
+			            <th>STAGES</th>
+			            <th></th>
+			            <th></th>
+	          		</tr>
+	          		<tr>
+	          			<td>15h00</td>
+			            <th></th>
+			            <th></th>
+			            <th>Classique 10-12</th>
+			            <th></th>
+			            <th>Danse de salon 10-12</th>
+			            <th>*STAGES</th>
+			            <th>**Prép. concours CLASSIQUE 16+</th>
+			            <th>**Prép. concours JAZZ 16+</th>
+	          		</tr>
+	          		<tr>
+	          			<td>16h15</td>
+			            <th></th>
+			            <th></th>
+			            <th>Classique 13-15</th>
+			            <th>Jazz 10-12</th>
+			            <th>Danse de salon 13-15</th>
+			            <th>*STAGES</th>
+			            <th></th>
+			            <th></th>
+	          		</tr>
+	          		<tr>
+	          			<td>17h30</td>
+			            <th></th>
+			            <th></th>
+			            <th>Classique 16+</th>
+			            <th>Jazz 13-15</th>
+			            <th></th>
+			            <th>*STAGES</th>
+			            <th></th>
+			            <th></th>
+	          		</tr>
+	          		<tr>
+	          			<td>18h45</td>
+			            <th></th>
+			            <th></th>
+			            <th>Classique débutant</th>
+			            <th>Jazz 16+</th>
+			            <th>Danse de salon 16+</th>
+			            <th>*STAGES</th>
+			            <th></th>
+			            <th></th>
+	          		</tr>
+	          		<tr>
+	          			<td>19h00</td>
+			            <th>Bachata inter</th>
+			            <th>Jazz avancé</th>
+			            <th>Classique inter</th>
+			            <th></th>
+			            <th>Salsa inter</th>
+			            <th>*STAGES</th>
+			            <th></th>
+			            <th></th>
+	          		</tr>
+	          		<tr>
+	          			<td>20h15</td>
+			            <th>Bachata avancé</th>
+			            <th>Jazz débutant</th>
+			            <th>Classique avancé</th>
+			            <th>Salsa débutant</th>
+			            <th>Salsa avancé</th>
+			            <th>*STAGES</th>
+			            <th></th>
+			            <th></th>
+	          		</tr>
+	          		<tr>
+	          			<td>21h30</td>
+			            <th>Bachata débutant</th>
+			            <th>Jazz inter</th>
+			            <th></th>
+			            <th></th>
+			            <th></th>
+			            <th>*STAGES</th>
+			            <th></th>
+			            <th></th>
+	          		</tr>
+	        	</tbody>
+	      	</table>
+
+	      	<p>Les horaires peuvent être modifiées en cours d'année.</p>
+	      	<p>*STAGES : hors stage, le studio A pourra être occupé pour la préparation des conconcours.</p>
+	      	<p>**CONCOURS: en fonction des concours présentés et du nombre d'élèves, les créneaux pourrons être modifiés (regroupés)</p>
+
+	      	<a class="btn" href="{{ path('inscriptions') }}">Je me pré-inscris !</a>
+
+	    </section>
 
 {% endblock %}

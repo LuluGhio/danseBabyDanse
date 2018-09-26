@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class PlanningController extends Controller
 {
     /**
-     * @Route("/planning", name="404")
+     * @Route("/planning", name="planning")
      */
     public function index()
     {

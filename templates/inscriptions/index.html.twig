@@ -4,13 +4,13 @@
 
     {% form_theme formInscriptions 'bootstrap_4_layout.html.twig' %}
 
-	<h4>Pré-inscrivez-vous !</h4>
+	<h4>Si vous souhaitez vous inscrire à un/plusieurs de nos cours, remplissez et envoyez ce formulaire :</h4>
 
 
 	    <section id="inscriptions" class="container">
 		
 			<p>Pour toute pré-inscription d'un mineur, les coordonnées <em>téléphone</em> et <em>email</em> doivent être celles du parent ou tuteur.</p>
-	    	<p>L'inscription définitive se fera après un cours d'essai (<a href="{{ path('404') }}" data-target="planning">planning</a>), et sous réserve de l'avis du professeur quant au niveau envisagé.</p>
+	    	<p>L'inscription définitive se fera après un cours d'essai (<a href="{{ path('planning') }}" data-target="planning">planning</a>), et sous réserve de l'avis du professeur quant au niveau envisagé.</p>
 
 	    
 		    {{ form_start(formInscriptions) }}
@@ -206,6 +206,7 @@
 		    {{ form_end(formInscriptions) }}
 
 	    	<p>Après envoi de ce formulaire, vous recevrez un email de confirmation de votre pré-inscription.</p>
+	    	<p>L'inscription définitive se fera après un cours d'essai (<a href="{{ path('planning') }}" data-target="planning">planning</a>), et sous réserve de l'avis du professeur quant au niveau envisagé.</p>
 
     	</section>
 

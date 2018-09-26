@@ -18,7 +18,9 @@ class InscriptionsController extends Controller
      * @Route("/inscriptions", name="inscriptions")
      */
     public function newInscriptions(Request $request, EntityManagerInterface $entityManager): Response{
-        
+    
+    $birthDate = new \DateTime(); 
+
     $entityManager = $this->getDoctrine()->getManager();
     
     $ins = new Inscriptions(); // $ins is an empty inscription object, ready to be completed
@@ -35,7 +37,7 @@ class InscriptionsController extends Controller
         // executes the query
         $entityManager->flush();
         // when everything is ok
-        return $this->render('home/merci.html.twig');
+        return $this->render('inscriptions/merci.html.twig');
     }
 
     // now I want to display the form via twig

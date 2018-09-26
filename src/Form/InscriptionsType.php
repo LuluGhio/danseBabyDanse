@@ -19,11 +19,6 @@ class InscriptionsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('adult', RadioType::class, array(
-                'label' => "Le pré-inscris est un enfant",
-                'required' => true)
-            )
-            
             ->add('firstName',TextType::class, array('label' => "Prénom"))
             
             ->add('lastName',TextType::class, array('label' => "Nom"))

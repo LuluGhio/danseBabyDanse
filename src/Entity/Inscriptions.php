@@ -25,11 +25,6 @@ class Inscriptions
     private $id;
 
     /**
-     * @ORM\Column(type="boolean")
-     */
-    private $adult;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $firstName;
@@ -84,18 +79,6 @@ class Inscriptions
         return $this->id;
     }
 
-    public function getAdult(): ?bool
-    {
-        return $this->adult;
-    }
-
-    public function setAdult(bool $adult): self
-    {
-        $this->adult = $adult;
-
-        return $this;
-    }
-
     public function getFirstName(): ?string
     {
         return $this->firstName;
@@ -144,7 +127,12 @@ class Inscriptions
         return $this;
     }
 
-    public function getBirthDate(): ?int
+    public function __construct()
+    {
+        $this->birthDate = new \DateTime();
+    }
+
+    public function getBirthDate(): \dateTime
     {
         return $this->birthDate;
     }

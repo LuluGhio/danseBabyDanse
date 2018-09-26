@@ -22,25 +22,18 @@ class InscriptionsRepository extends ServiceEntityRepository
     /**
      * @return Inscriptions[] Returns an array of Inscriptions objects
      */
-    
-    public function isAdult($adult): array
+
+
+    public function findAll(): array
     {
-        if ($adult == false)
-            return "adulte";
-        else
-            return "enfant/ado";
+        $queryBuilder = $this->createQueryBuilder('i');    // 'i' is an alias = shortcut for Inscriptions
 
-
-        /*
         return $this->createQueryBuilder('i')
-            ->andWhere('i.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('i.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
+            ->orderBy('i.lastName','lasName')
         ;
-        */
+
+        return $queryBuilder->getQuery()->getResult();
+
     }
     
 

@@ -6,28 +6,28 @@
         <!-- Compiled and minified CSS -->
     
         {% block stylesheets %}
-          <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         {% endblock %}
     </head>
-    
+
     <body>
     	<header>
-			<nav>
-			  <div class="nav-wrapper grey darken-4">
-			    <a href="{{ path('home') }}" class="brand-logo">Danse baby danse !</a>
-			    <ul class="right hide-on-med-and-down">
-			      <!-- Dropdown Trigger -->
-			      <li><a class="dropdown-trigger" href="#!" data-target="planning">Plannings/Tarifs<i class="material-icons right"></i></a></li>
-			      <li><a class="dropdown-trigger" href="#!" data-target="stage">Stages<i class="material-icons right"></i></a></li>
-			      <li><a class="dropdown-trigger" href="{{ path('inscriptions') }}" data-target="inscriptions">Pré-inscriptions<i class="material-icons right"></i></a></li>
-			      <li><a class="dropdown-trigger" href="#!" data-target="annonces">Petites annonces<i class="material-icons right"></i></a></li>
-			      <li><a class="dropdown-trigger" href="{{ path('contact') }}" data-target="annonces">Contactez-nous !<i class="material-icons right"></i></a></li>
-			      <li><a href="#!">Espace membre</a></li>
-			    </ul>
-			  </div>
-			</nav>
-        </header>
+  			<nav>
+  			  <div class="nav-wrapper grey darken-4">
+  			    <a href="{{ path('home') }}" class="brand-logo">Danse baby danse !</a>
+  			    <ul class="right hide-on-med-and-down">
+  			      <!-- Dropdown Trigger -->
+  			      <li><a class="dropdown-trigger" href="{{ path('404') }}" data-target="planning">Plannings/Tarifs<i class="material-icons right"></i></a></li>
+  			      <li><a class="dropdown-trigger" href="#!" data-target="stage">Stages<i class="material-icons right"></i></a></li>
+  			      <li><a class="dropdown-trigger" href="{{ path('inscriptions') }}" data-target="inscriptions">Pré-inscriptions<i class="material-icons right"></i></a></li>
+  			      <li><a class="dropdown-trigger" href="#!" data-target="annonces">Petites annonces<i class="material-icons right"></i></a></li>
+  			      <li><a class="dropdown-trigger" href="{{ path('contact') }}" data-target="annonces">Contactez-nous !<i class="material-icons right"></i></a></li>
+  			      <li><a href="#!">Espace membre</a></li>
+  			    </ul>
+  			  </div>
+  			</nav>
+      </header>
 
 
         <div class="container-fluid">
@@ -46,7 +46,7 @@
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Nos liens</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Plannings/Tarifs</a></li>
+                  <li><a class="grey-text text-lighten-3" href="{{ path('404') }}">Plannings/Tarifs</a></li>
                   <li><a class="grey-text text-lighten-3" href="{{ path('inscriptions') }}">Pré-inscriptions</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Petites annonces</a></li>
                   <li><a class="grey-text text-lighten-3" href="{{ path('contact') }}">Contact</a></li>

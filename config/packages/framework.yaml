@@ -107,7 +107,6 @@ easy_admin:
                 fields:
                     - { property: 'checked', type: 'toggle' }
                     - { property: 'id' }
-                    - { property: 'adult'}
                     - { property: 'firstName' }
                     - { property: 'lastName' }
                     - { property: 'phoneNumber' }
@@ -116,7 +115,6 @@ easy_admin:
                     - { property: 'grades' }
             show:
                 fields:
-                    - { property: 'adult'}
                     - { property: 'firstName' }
                     - { property: 'lastName' }
                     - { property: 'phoneNumber' }
@@ -125,7 +123,6 @@ easy_admin:
                     - { property: 'grades' }
             edit:
                 fields:
-                    - { property: 'adult'}
                     - { property: 'firstName' }
                     - { property: 'lastName' }
                     - { property: 'phoneNumber' }
@@ -134,7 +131,6 @@ easy_admin:
                     - { property: 'grades' }
             new:
                 fields:
-                    - { property: 'adult'}
                     - { property: 'firstName' }
                     - { property: 'lastName' }
                     - { property: 'phoneNumber' }

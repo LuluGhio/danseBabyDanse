@@ -10,81 +10,201 @@
 	    <section id="inscriptions" class="container">
 		
 			<p>Pour toute pré-inscription d'un mineur, les coordonnées <em>téléphone</em> et <em>email</em> doivent être celles du parent ou tuteur.</p>
-	    	<p>L'inscription définitive se fera après un cours d'essai (<a href="#!" data-target="planning">planning</a>), et sous réserve de l'avis du professeur quant au niveau envisagé.</p>
+	    	<p>L'inscription définitive se fera après un cours d'essai (<a href="{{ path('404') }}" data-target="planning">planning</a>), et sous réserve de l'avis du professeur quant au niveau envisagé.</p>
 
 	    
 		    {{ form_start(formInscriptions) }}
 
-		        <p>Cochez si :</p>
-		        {{ form_row(formInscriptions.adult) }}
 		        {{ form_row(formInscriptions.firstName) }}
 		        {{ form_row(formInscriptions.lastName) }}
 		        {{ form_row(formInscriptions.phoneNumber) }}
 		        {{ form_row(formInscriptions.email) }}
-		        {{ form_row(formInscriptions.birthDate) }}
-		        <p>Choississez vos cours :</p>
+		        {{ form_row(formInscriptions.birthDate ) }}
+		        
+		        <p>Choisissez vos cours :</p>
 		        <div class="row">
-		        	<div class="col s12 m3">
-		        		<p>Enfants/ados</p>
-				        {{ form_row(formInscriptions.grades) }}
-				        	<input type="checkbox"><label for="">CLASSIQUE 7-9 ans</label>
-				        	<br>
-				        	<input type="checkbox"><label for="">CLASSIQUE 10-12 ans</label>
-				        	<br>
-				        	<input type="checkbox"><label for="">CLASSIQUE 13-15 ans*</label>
-				        	<br>
-				        	<input type="checkbox"><label for="">CLASSIQUE 16 ans et plus</label>
-				        	<br>
-				        	<input type="checkbox"><label for="">JAZZ 10-12 ans**</label>
-				        	<br>
-				        	<input type="checkbox"><label for="">JAZZ 13-15 ans</label>
-				        	<br>
-				        	<input type="checkbox"><label for="">JAZZ 16 ans et plus</label>
-		        	</div>
-		        	<div class="col s12 m3">
-		        		<p>Enfants/ados</p>
-			        	<input type="checkbox"><label for="">DANSE DE SALON 10-12 ans</label>
-			        	<br>
-			        	<input type="checkbox"><label for="">DANSE DE SALON 13-15 ans</label>
-			        	<br>
-			        	<input type="checkbox"><label for="">DANSE DE SALON 16 ans et plus</label>
+		        	<div class="col s12 m6">
+		        		<div class="form-group">
+		        			<fieldset>
+			        			<legend>Enfants/ados</legend>
+
+					        	<label>
+							        <input type="checkbox" id="eveil" name="eveil" value="eveil">
+							        <span>{{ form_row(formInscriptions.grades)}}</span>
+							    </label>
+
+					        	<hr>
+					        	
+					        	<label>
+							        <input type="checkbox" id="classique79" name="classique79" value="classique79">
+							        <span>CLASSIQUE 7-9 ans</span>
+							    </label>
+					        	
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="classique1012" name="classique1012" value="classique1012">
+					        		<span>CLASSIQUE 10-12 ans</span>
+					        	</label>
+					        	
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="classique1315" name="classique1315" value="classique1315">
+					        		<span>CLASSIQUE 13-15 ans*</span>
+					        	</label>
+					        	
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="classique16" name="classique16" value="classique16">
+					        		<span>CLASSIQUE 16 ans et plus</span>
+					        	</label>
+					        	
+					        	<hr>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="jazz1012" name="jazz1012" value="jazz1012">
+					        		<span>JAZZ 10-12 ans**</span>
+					        	</label>
+					        	
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="jazz1315" name="jazz1315" value="jazz1315">
+					        		<span>JAZZ 13-15 ans</span>
+					        	</label>
+					        	
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="jazz16" name="jazz16" value="jazz16">
+					        		<span>JAZZ 16 ans et plus</span>
+					        	</label>
+					        	
+					        	<hr>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="salon1012" name="salon1012" value="salon1012">
+					        		<span>DANSE DE SALON 10-12 ans</span>
+					        	</label>
+					        	
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="salon1315" name="salon1315" value="salon1315">
+					        		<span>DANSE DE SALON 13-15 ans</span>
+					        	</label>
+					        						        	
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="salon16" name="salon16" value="salon16">
+					        		<span>DANSE DE SALON 16 ans et plus</span>
+					        	</label>
+					        	
+				        	</fieldset>
+				        </div>
 		        	</div>
 		        	
 		        	
-		        	<div class="col s12 m3">
-		        		<p>Adultes</p>
-			        	<input type="checkbox"><label for="">CLASSIQUE débutant</label>
-			        	<br>
-			        	<input type="checkbox"><label for="">CLASSIQUE intermédiaire</label>
-			        	<br>
-			        	<input type="checkbox"><label for="">CLASSIQUE avancé</label>
-						<br>
-			        	<input type="checkbox"><label for="">JAZZ débutant</label>
-			        	<br>
-			        	<input type="checkbox"><label for="">JAZZ intermédiaire</label>
-			        	<br>
-			        	<input type="checkbox"><label for="">JAZZ avancé</label>
-			        </div>
-			        <div class="col s12 m3">
-			        	<p>Adultes</p>
-			        	<input type="checkbox"><label for="">SALSA débutant</label>
-			        	<br>
-			        	<input type="checkbox"><label for="">SALSA intermédiaire</label>
-			        	<br>
-			        	<input type="checkbox"><label for="">SALSA avancé</label>
-						<br>
-			        	<input type="checkbox"><label for="">BACHATA débutant</label>
-			        	<br>
-			        	<input type="checkbox"><label for="">BACHATA intermédiaire</label>
-			        	<br>
-			        	<input type="checkbox"><label for="">BACHATA avancé</label>
+					<div class="col s12 m6">
+		        		<div class="form-group">
+		        			<fieldset>
+		        				<legend>Adultes</legend>
+					        	<label>
+					        		<input type="checkbox" id="classiqueDeb" name="classiqueDeb" value="classiqueDeb">
+					        		<span>CLASSIQUE débutant</span>
+					        	</label>
+
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="classiqueInter" name="classiqueInter" value="classiqueInter">
+					        		<span>CLASSIQUE intermédiaire</span>
+					        	</label>
+					        						        	
+					        	<br>
+
+					        	<label>
+					        		<input type="checkbox" id="classiqueAv" name="classiqueAv" value="classiqueAv">
+					        		<span>CLASSIQUE avancé</span>
+					        	</label>
+					        									
+								<hr>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="jazzDeb" name="jazzDeb" value="jazzDeb">
+					        		<span>JAZZ débutant</span>
+					        	</label>
+					        	
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="jazzInter" name="jazzInter" value="jazzInter">
+					        		<span>JAZZ intermédiaire</span>
+					        	</label>
+					        	
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="jazzAv" name="jazzAv" value="jazzAv">
+					        		<span>JAZZ avancé</span>
+					        	</label>
+					        	
+					        	<hr>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="salsaDeb" name="salsaDeb" value="salsaDeb">
+					        		<span>SALSA débutant</span>
+					        	</label>
+					        	
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="salsaInter" name="salsaInter" value="salsaInter">
+					        		<span>SALSA intermédiaire</span>
+					        	</label>
+					        						        	
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="salsaAv" name="salsaAv" value="salsaAv">
+					        		<span>SALSA avancé</span>
+					        	</label>
+					        									
+								<hr>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="bachataDeb" name="bachataDeb" value="bachataDeb">
+					        		<span>BACHATA débutant</span>
+					        	</label>
+					        						        	
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="bachataInter" name="bachataInter" value="bachataInter">
+					        		<span>BACHATA intermédiaire</span>
+					        	</label>
+					        						        	
+					        	<br>
+					        	
+					        	<label>
+					        		<input type="checkbox" id="bachataAv" name="bachataAv" value="bachataAv">
+					        		<span>BACHATA avancé</span>
+					        	</label>
+					        	
+				        </fieldset>
 			        </div>
 		        </div>
-		        <div class="row col s12 m6">
+
+		        <div class="row col s12 m12">
 				        <p>* Début du travail sur pointes, sous réserve de l'avis du professeur. Un refus du professeur n'est ni un échec ni une punition: monter sur pointe exige une musculature et une technique avancée - chaque enfant est unique, sa croissance également. Nous ne souhaitons pas que vos enfants se blessent.</p>
-	        			<p>** Pour des raisons physiques, pas de jazz avant 10ans. Avant de pratiquer le jazz, le corps et les muscles des enfants doivent s'habituer aux postures, aux techniques et à la discipline de la danse en passant par la pratique de la danse classique.</p>
+	        			<p>** Pour des raisons physiques, pas de jazz avant 10 ans. Avant de pratiquer le jazz, le corps et les muscles des enfants doivent s'habituer aux postures, à la technique et à la discipline de la danse en passant par la pratique de la danse classique.</p>
         			</div>
+
 		    {{ form_end(formInscriptions) }}
+
 	    	<p>Après envoi de ce formulaire, vous recevrez un email de confirmation de votre pré-inscription.</p>
 
     	</section>

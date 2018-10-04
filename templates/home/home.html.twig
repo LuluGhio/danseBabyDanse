@@ -34,6 +34,50 @@
         </section> <!-- END OF SECTION actus -->
 
         <a class="btn" href="{{ path('allActus') }}">Voir tous les évènements</a>
+
+    <h4>Vous souhaitez...</h4>
+    <section class="container row">
+
+        <div class="col s12 m12">
+            <h5 class="header">Faire un cours d'essai ?</h5>
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="http://formndanses.e-monsite.com/medias/files/danse.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>Accédez à notre planning pour faire votre choix et venez tester !
+                        <br>
+                        (1 cours d'essai gratuit par discipline / 10€ pas cours d'essai supplémentaire)</p>
+                    </div>
+                    <div class="card-action">
+                        <a class="btn" href="{{ path('planning') }}">Planning</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m12">
+            <h5 class="header">Vous inscrire ?</h5>
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="https://cdt29.media.tourinsoft.eu/upload/B566A463-C63C-43D9-B1A3-CC295CFE7BB6/danse-620x250.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p>Accédez à notre formulaire de pré-inscription !
+                        <br>
+                        L'inscription définitive se fera après un cours d'essai, et sous réserve de l'avis du professeur quant au niveau envisagé.</p>
+                    </div>
+                    <div class="card-action">
+                        <a class="btn" href="{{ path('inscriptions') }}">Pré-inscription</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
             
 
 {% endblock %}

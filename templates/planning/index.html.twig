@@ -5,16 +5,24 @@
 	<h4>Notre planning !</h4>
 
 		<section id="planning" class="container">
+			<p>Les horaires peuvent être modifiées en cours d'année.</p>
 		 		
 	      	<table class="striped centered responsive-table teal lighten-3">
 	        	<thead>
 	          		<tr class="centered">
 	          			<th></th>
-		              <th colspan="3">LUNDI</th>
-		              <th colspan="3">MERCREDI</th>
-		              <th>SAMEDI</th>
+	          			<th>Lundi</th>
+	          			<th></th>
+	          			<th></th>
+	          			<th>Mercredi</th>
+	          			<th></th>
+	          			<th></th>
+	          			<th>Samedi</th>
+	          			<th></th>
 	          		</tr>
-	          		<tr>
+	        	</thead>
+	        	<tbody>
+	        		<tr>
 		                <th>Horaires</th>
 		                <th>Studio A</th>
 		                <th>Studio B</th>
@@ -25,8 +33,6 @@
 		                <th>Studio B</th>
 		                <th>Studio C</th>
 	          		</tr>
-	        	</thead>
-	        	<tbody>
 	          		<tr>
 	          			<td>11h00</td>
 			            <th></th>
@@ -151,12 +157,59 @@
 	        	</tbody>
 	      	</table>
 
-	      	<p>Les horaires peuvent être modifiées en cours d'année.</p>
 	      	<p>*STAGES : hors stage, le studio A pourra être occupé pour la préparation des conconcours.</p>
-	      	<p>**CONCOURS: en fonction des concours présentés et du nombre d'élèves, les créneaux pourrons être modifiés (regroupés)</p>
+	      	<p>**CONCOURS: en fonction des concours présentés et du nombre d'élèves, les créneaux pourrons être modifiés (regroupés). </p>
 
 	      	<a class="btn" href="{{ path('inscriptions') }}">Je me pré-inscris !</a>
 
+	    </section>
+
+	    <h4>Les tarifs !</h4>
+
+	    <section id="tarifs" class="container">
+
+	    	<h5>Les cours :</h5>
+
+	    	<table class="centered">
+	    		<tbody>
+	    			<tr>
+	    				<th>1 cours /semaine</th>
+	    				<th>2 cours /semaine</th>
+	    				<th>3 cours /semaine</th>
+	    				<th>4 cours et plus /semaine</th>
+	    			</tr>
+	    			<tr>
+	    				<th>50€ /mois</th>
+	    				<th>100€ /mois</th>
+	    				<th>130€ /mois</th>
+	    			</tr>
+	    		</tbody>
+	    	</table>
+
+	    	<h5>Les concours :</h5>
+
+	    	<table class="centered">
+	    		<tbody>
+	    			<tr>
+	    				<th>1 /an</th>
+		    			<th>2 /an</th>
+		    			<th>3 /an</th>
+	    			</tr>
+	    			<tr>
+	    				<th>100€</th>
+		    			<th>200€</th>
+		    			<th>270€</th>
+	    			</tr>
+	    		</tbody>
+	    	</table>
+
+	    	<p>Les tarifs pour les concours comprennent les frais d'adhésion à la FFD (l'école s'occupe de remplir et envoyer les dossiers) et 4 séances de 2h30 chacune (samedi matin).</p>
+			<p>Les frais d'inscription à chaque concours ne sont pas inclus, prévoir 50€ par concours en moyenne.</p>
+			<p>L'inscription à un concours doit au préalable être validée par le professeur. L'enfant doit présenter les capacités techniques et morales, et la rigueur adéquates pour ce type d'exercice : nous ne souhaitons pas qu'un échec affecte de trop votre enfant.</p>
+			<p>L'inscription à un concours engage l'enfant et le parent accompagnant : les séances d'entraînement ont lieu le samedi - 1 concours nécessite au minimum 4 séances de 2h30 chacune (samedi matin).</p>
+			<p>Pour tout renseignement complémentaire (solos, trajets, costumes, autres...), s'adresser à la direction.</p>
+	    	
+	    	
 	    </section>
 
 {% endblock %}

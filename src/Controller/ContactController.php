@@ -34,11 +34,11 @@ class ContactController extends Controller
             $entityManager->persist($contact);
             // executes the query
             $entityManager->flush();
-            return $this->render('home/merci.html.twig');
+            return $this->render('contact/merci.html.twig');
         }
 
         // now I want to display the form via twig
-        return $this->render('home/contact.html.twig',[
+        return $this->render('contact/contact.html.twig',[
             'formContact' => $form->createView()
             // createView() is a method from the FORM CLASS to make the displaying
             ]);

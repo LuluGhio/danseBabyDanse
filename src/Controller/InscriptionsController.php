@@ -46,5 +46,4 @@ class InscriptionsController extends Controller
         // createView() is a method from the FORM CLASS to make the displaying
         ]);
     }
-
 }

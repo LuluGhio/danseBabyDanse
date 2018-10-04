@@ -53,12 +53,12 @@ class Inscriptions
     private $email;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="datetime")
      */
     private $birthDate;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="array")
      */
     private $grades;
 
@@ -137,19 +137,19 @@ class Inscriptions
         return $this->birthDate;
     }
 
-    public function setBirthDate(int $birthDate): self
+    public function setBirthDate(\DateTime $birthDate): self
     {
         $this->birthDate = $birthDate;
 
         return $this;
     }
 
-    public function getGrades(): ?bool
+    public function getGrades(): ?array
     {
         return $this->grades;
     }
 
-    public function setGrades(bool $grades): self
+    public function setGrades(array $grades): self
     {
         $this->grades = $grades;
 

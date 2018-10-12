@@ -33,9 +33,10 @@ class InscriptionsType extends AbstractType
             )
             
             ->add('grades', ChoiceType::class,array(
-                'label' => "Choissiez les cours qui vous intéressent:",
+                'label' => "Choisissez les cours qui vous intéressent:",
                 'required' => true,
-                'expanded' =>true,
+                'expanded' => true,
+                'multiple' => true,
                 'choices' => array(
                                     'EVEIL 4-6ans' => 'eveil', // 'eveil' is the value in the twig form
                                     'CLASSIQUE 7-9ans' => 'classique79',
@@ -48,18 +49,18 @@ class InscriptionsType extends AbstractType
                                     'DANSE DE SALON 10-12ans' => 'salon1012',
                                     'DANSE DE SALON 13-15ans' => 'salon1315',
                                     'DANSE DE SALON 16ans et +' => 'salon16',
-                                    'CLASSIQUE adulte débutant' => 'classiqueDeb',
-                                    'CLASSIQUE adulte intermédiaire' => 'classiqueInter',
-                                    'CLASSIQUE adulte avancé' => 'classiqueAv',
-                                    'JAZZ adulte débutant' => 'jazzDeb',
-                                    'JAZZ adulte intermédiaire' => 'jazzInter',
-                                    'JAZZ adulte avancé' => 'jazzAv',
-                                    'BACHATA adulte débutant' => 'bachataDeb',
-                                    'BACHATA adulte intermédiaire' => 'bachataInter',
-                                    'BACHATA adulte avancé' => 'bachataAv',
-                                    'SALSA adulte débutant' => 'salsaDeb',
-                                    'SALSA adulte intermédiaire' => 'salsaInter',
-                                    'SALSA adulte avancé' => 'salsaAv'
+                                    'CLASSIQUE débutant' => 'classiqueDeb',
+                                    'CLASSIQUE intermédiaire' => 'classiqueInter',
+                                    'CLASSIQUE avancé' => 'classiqueAv',
+                                    'JAZZ débutant' => 'jazzDeb',
+                                    'JAZZ intermédiaire' => 'jazzInter',
+                                    'JAZZ avancé' => 'jazzAv',
+                                    'BACHATA débutant' => 'bachataDeb',
+                                    'BACHATA intermédiaire' => 'bachataInter',
+                                    'BACHATA avancé' => 'bachataAv',
+                                    'SALSA débutant' => 'salsaDeb',
+                                    'SALSA intermédiaire' => 'salsaInter',
+                                    'SALSA avancé' => 'salsaAv'
                                     ),
                 
                 )

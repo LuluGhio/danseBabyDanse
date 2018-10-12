@@ -23,8 +23,11 @@
 		        {{ form_row(formInscriptions.birthDate ) }}
 		        {{ form_row(formInscriptions.grades) }}
 		        
+			
+
 		        <div class="row">
 		        	<div class="col s12 m6">
+		        		<!--
 		        		<div class="form-group">
 		        			<fieldset>
 			        			<legend>Enfants/ados</legend>
@@ -87,21 +90,21 @@
 					        	
 					        	<label>
 					        		<input type="checkbox" id="salon1012" name="salon1012" value="salon1012">
-					        		<span>DANSE DE SALON 10-12 ans</span>
+					        		<span>DANSE DE SALON 10-12 ans***</span>
 					        	</label>
 					        	
 					        	<br>
 					        	
 					        	<label>
 					        		<input type="checkbox" id="salon1315" name="salon1315" value="salon1315">
-					        		<span>DANSE DE SALON 13-15 ans</span>
+					        		<span>DANSE DE SALON 13-15 ans***</span>
 					        	</label>
 					        						        	
 					        	<br>
 					        	
 					        	<label>
 					        		<input type="checkbox" id="salon16" name="salon16" value="salon16">
-					        		<span>DANSE DE SALON 16 ans et plus</span>
+					        		<span>DANSE DE SALON 16 ans et plus***</span>
 					        	</label>
 					        	
 				        	</fieldset>
@@ -196,13 +199,20 @@
 					        	</label>
 					        	
 				        </fieldset>
+				    -->
 			        </div>
 		        </div>
 
 		        <div class="row col s12 m12">
-				        <p>* Début du travail sur pointes, sous réserve de l'avis du professeur. Un refus du professeur n'est ni un échec ni une punition: monter sur pointe exige une musculature et une technique avancée - chaque enfant est unique, sa croissance également. Nous ne souhaitons pas que vos enfants se blessent.</p>
-	        			<p>** Pour des raisons pédagogiques, pas de jazz avant 10 ans. Avant de pratiquer le jazz, le corps et les muscles des enfants doivent s'habituer aux postures, à la technique et à la discipline de la danse en passant par la pratique de la danse classique.</p>
-        			</div>
+			        <p>* Début du travail sur pointes, sous réserve de l'avis du professeur. Un refus du professeur n'est ni un échec ni une punition: monter sur pointe exige une musculature et une technique avancée - chaque enfant est unique, sa croissance également. Nous ne souhaitons pas que vos enfants se blessent.</p>
+        			<p>** Pour des raisons pédagogiques, pas de jazz avant 10 ans. Avant de pratiquer le jazz, le corps et les muscles des enfants doivent s'habituer aux postures, à la technique et à la discipline de la danse en passant par la pratique de la danse classique.</p>
+        			<p>*** Cha-cha-cha, salsa, samba, rumba, mambo, lambada... et tango si présence d'élèves masculins.</p>
+        			<hr>
+        			<p>Concours possibles en classique, jazz et danses de salon (sous réserve de l'avis du professeur). 
+        			<br>
+        			Les concours sont ouverts aux moins de 26 ans (FFD).</p>
+        			<p>Tarifs des concours <a class="btn" href="{{ path('planning') }}">ici (bas de page)</a>.</p>
+        		</div>
 
 		    {{ form_end(formInscriptions) }}
 

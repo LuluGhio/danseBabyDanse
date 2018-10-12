@@ -46,4 +46,32 @@ class InscriptionsController extends Controller
         // createView() is a method from the FORM CLASS to make the displaying
         ]);
     }
+
+    /**
+    *
+    */
+    public function registrationInsEmail($name, \Swift_Mailer $mailer){    // $name correspond à quoi ?
+
+    $mailer = $this->container->get('mailer'); 
+        // pour accéder à la classe de Symfony héritant de ContainerAware / 'mailer' est le service auquel on veut accéder
+
+    /* CE BOUT DE CODE SE TROUVE DANS src/Services/MailInscriptionsEmail.php :
+    $message = (new \Swift_Message('Pré-inscription bien reçue')) // $message est un objet swift_message
+        ->setFrom('ghiolucile@gmail.com')
+        ->setTo('lucileghio@live.fr')        // => récupérer email du form envoyé
+        ->setBody(
+            $this->renderView(
+                'inscriptions/registration.html.twig',
+                array('name' => $name)
+            ),
+            'text/html'
+        )
+    ;
+
+    $mailer->send($message);
+
+    return $this->render('inscriptions/registration.html.twig');
+    }
+    */
+
 }

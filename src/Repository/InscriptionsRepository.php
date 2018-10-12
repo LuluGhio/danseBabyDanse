@@ -22,14 +22,12 @@ class InscriptionsRepository extends ServiceEntityRepository
     /**
      * @return Inscriptions[] Returns an array of Inscriptions objects
      */
-
-
     public function findAll(): array
     {
         $queryBuilder = $this->createQueryBuilder('i');    // 'i' is an alias = shortcut for Inscriptions
 
         return $this->createQueryBuilder('i')
-            ->orderBy('i.lastName','lasName')
+                    ->orderBy('i.lastName','ASC')
         ;
 
         return $queryBuilder->getQuery()->getResult();

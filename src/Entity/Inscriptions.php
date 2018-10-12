@@ -140,6 +140,7 @@ class Inscriptions
     public function setBirthDate(\DateTime $birthDate): self
     {
         $this->birthDate = $birthDate;
+        $this->grades = [];
 
         return $this;
     }

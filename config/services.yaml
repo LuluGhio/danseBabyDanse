@@ -15,10 +15,12 @@ services:
         public: false       # Allows optimizing the container by removing unused services; this also means
                             # fetching services directly from the container via $container->get() won't work.
                             # The best practice is to be explicit about your dependencies anyway.
-    Services.MailInscriptionsService:
-        class: Services\MailInscriptionsService\MailInscriptionsService
+    MailInscriptionsService:        # le nom du service
+        public: true
+        class: App\Services\MailInscriptionsService
         arguments:
-            - "@Services.MailInscriptionsService"
+            - "@mailer"
+            - "@templating"
         tags:
             - { name: mailInscriptions }
 

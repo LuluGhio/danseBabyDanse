@@ -20,7 +20,7 @@ services:
         class: App\Services\MailInscriptionsService
         arguments:
             - "@mailer"
-            - "@templating"
+            - "@twig"
         tags:
             - { name: mailInscriptions }
 

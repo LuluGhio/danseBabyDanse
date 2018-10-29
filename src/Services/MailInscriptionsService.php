@@ -4,29 +4,29 @@ namespace App\Services;
 
 class MailInscriptionsService
 {
-	private $mailer;	// je définis l'attribut mailer
+	private $mailer;		// set the $mailer attribute
+	private $templating;	// set the $templating attribute
 
-	public function __construct(\Swift_Mailer $mailer){
+	public function __construct(\Swift_Mailer $mailer, \Twig_Environment $templating){
 		$this->mailer = $mailer;
+		$this->templating = $templating;
 	}
 
-	public function sendMailRegister($mailInscriptions){    // $mailInscriptions est le nom du service
+	public function sendMailRegister($mailInscriptions){    // $mailInscriptions is the service's name
+	    $message = (new \Swift_Message('Pré-inscription bien reçue')) // $message is a swift_message object
+	        ->setFrom('ghiolucile@gmail.com')
+	        ->setTo($mailInscriptions)        // => $mailInscrition = email from submitted form
+	        ->setBody(
+	            $this->templating->render('inscriptions/mailInscriptions.html.twig',
+	                array('name' => $mailInscriptions)
+	            ),
+	            'text/html'
+	        )
+	    ;
 
-    $message = (new \Swift_Message('Pré-inscription bien reçue')) // $message est un objet swift_message
-        ->setFrom('ghiolucile@gmail.com')
-        ->setTo($mailInscriptions)        // => récupérer email du form envoyé
-        ->setBody(
-            $this->templating->render(
-                'inscriptions/mailInscriptions.html.twig',
-                array('name' => $mailInscriptions)
-            ),
-            'text/html'
-        )
-    ;
+	    $this->mailer->send($message);
 
-    $mailer->send($message);
-
-    return $this->render('inscriptions/mailInscriptions.html.twig');
+	    return $this->templating->render('inscriptions/merci.html.twig');
     }
 
 }

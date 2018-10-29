@@ -41,7 +41,7 @@ class InscriptionsController extends Controller
         // recovering the email saved in the form :
         $mailInscriptions = $ins->getEmail();
         // calling for the service to send a confirmation email :
-        $this->$mailer = $this->get('MailInscriptionsService')->sendMailRegister($mailInscriptions); 
+        $this->mailer = $this->get('MailInscriptionsService')->sendMailRegister($mailInscriptions); 
 
         return $this->render('inscriptions/merci.html.twig');
     }
@@ -52,32 +52,5 @@ class InscriptionsController extends Controller
         // createView() is a method from the FORM CLASS to make the displaying
         ]);
     }
-
-    /**
-    *
-    */
-    /* 
-    public function registrationInsEmail($name, ){    // $name correspond à quoi ?
-
-        // pour accéder à la classe de Symfony héritant de ContainerAware / 'mailer' est le service auquel on veut accéder
-
-    //CE BOUT DE CODE SE TROUVE DANS src/Services/MailInscriptionsEmail.php :
-    $message = (new \Swift_Message('Pré-inscription bien reçue')) // $message est un objet swift_message
-        ->setFrom('ghiolucile@gmail.com')
-        ->setTo('lucileghio@live.fr')        // => récupérer email du form envoyé
-        ->setBody(
-            $this->renderView(
-                'inscriptions/registration.html.twig',
-                array('name' => $name)
-            ),
-            'text/html'
-        )
-    ;
-
-    $mailer->send($message);
-
-    return $this->render('inscriptions/registration.html.twig');    
-    }*/
-    
 
 }

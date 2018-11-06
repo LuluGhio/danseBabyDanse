@@ -1,11 +1,6 @@
 # danseBabyDanse
 Application Symfony 4 - projet personnel
 
-Bundles installés :
-- EasyAdminBundle
-- VichUploaderbundle
-- SwiftMailerBundle
-
 *** Pré-recquis :
 - php7
 - un serveur mySql

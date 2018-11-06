@@ -16,6 +16,7 @@ class MailInscriptionsService
 	    $message = (new \Swift_Message('Pré-inscription bien reçue')) // $message is a swift_message object
 	        ->setFrom('ghiolucile@gmail.com')
 	        ->setTo($mailInscriptions)        // => $mailInscrition = email from submitted form
+	        ->setSubject('DanseBabyDanse : pré-inscription validée')
 	        ->setBody(
 	            $this->templating->render('inscriptions/mailInscriptions.html.twig',
 	                array('name' => $mailInscriptions)

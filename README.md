@@ -17,3 +17,5 @@ Application Symfony 4 - projet personnel
 
 
 *** Accès partie admin : /admin
+		login : lulu
+		password : admin
